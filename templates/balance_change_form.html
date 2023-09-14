@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Display current date and time</title>
+  </head>
+  <body>
+    <span id="datetime"></span>
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+        const currentDateTime = now.toLocaleString();
+        document.querySelector('#datetime').textContent = currentDateTime;
+      }
+
+      setInterval(updateDateTime, 1000);
+    </script>
+  </body>
+</html>
+
+<html lang="en">
+<head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Change Form</title>
+</head>
+
+
+<nav class="navbar bg-body-tertiary">
+    <form class="container-fluid justify-content-start">
+      <a href="/"><button class="btn btn-outline-success me-2" type="button">Main Page</button></a>
+      <a href="history"></a><button class="btn btn-sm btn-outline-secondary" type="button">History</button></a>
+    </form>
+  </nav>
+
+    <body>
+        <div class="container ">
+            <h2>Balance Change Form</h2>
+
+            <div class="card-body">
+                <form action="balance-change-form" method="post">
+                    <div class="form-group">
+                        <label for="operation-type">Type of Operation</label>
+                        <select class="form-select" id="operation-type" name="type" required >
+                            <option value="add">Add</option>
+                            <option value="subtract">Subtract</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="balance-value">Numeric Value</label>
+                        <input type="number" class="form-input" id="balance-value"  name="balance" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+

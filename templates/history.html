@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+          <a href="/"><button class="btn btn-outline-success me-2" type="button">Main Page</button></a>
+          <a href="history"><button class="btn btn-sm btn-outline-secondary" type="button">History</button></a>
+        </form>
+      </nav>
+
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css@0.5.9/dist/spectre.min.css">
+</head>
+<body>
+
+    <div class="container ">
+        <h2>History Summary</h2>
+        <div class="columns">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                History Summary
+            </div>
+            <div class="card-body">
+                {% for history in history_summary %}
+                <p>- <span id="account_inventory">{{history}}</span> </p>
+                {% endfor %}
+            </div>
+        </div>
+

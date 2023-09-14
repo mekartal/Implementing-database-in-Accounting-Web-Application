@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Display current date and time</title>
+  </head>
+  <body>
+    <span id="datetime"></span>
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+        const currentDateTime = now.toLocaleString();
+        document.querySelector('#datetime').textContent = currentDateTime;
+      }
+      setInterval(updateDateTime, 1000);
+    </script>
+  </body>
+</html>
+
+<html lang="en">
+<head>
+
+
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+          <a href="/"><button class="btn btn-outline-success me-2" type="button">Main Page</button></a>
+          <a href="history"><button class="btn btn-sm btn-outline-secondary" type="button">History</button></a>
+        </form>
+      </nav>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting and Warehouse Management</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css@0.5.9/dist/spectre.min.css">
+</head>
+<body>
+
+    <div class="container ">
+        <h2>Accounting and Warehouse Management</h2>
+        <div class="columns">
+            <div class="column col-100 col-mr-auto  mt-2">
+
+            </div>
+        </div>
+
+
+        
+
+        <div class="card">
+            <div class="card-header">
+                Main Page
+            </div>
+            <div class="card-body">
+                <p>Current Account Balance: $<span id="account-balance">{{account_balance}}</span></p>#
+                {% for product in account_inventory %}
+                <li>{{product.name}} | Price: {{product.price}} | Quantity: {{product.quantity}}</li>
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <div class ="columns">
+        <div class="column col-20 p-centered mt-2">
+            <a href="sale-form"><button class="btn btn-lg btn-success">Sale Form</button></a>
+            <a href="purchase-form"><button class="btn btn-lg btn-error">Purchase Form</button></a>
+            <a href="balance-change-form"><button class="btn btn-lg btn-primary">Balance Change Form</button></a>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+  

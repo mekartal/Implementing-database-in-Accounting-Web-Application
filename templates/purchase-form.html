@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Display current date and time</title>
+  </head>
+  <body>
+    <span id="datetime"></span>
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+        const currentDateTime = now.toLocaleString();
+        document.querySelector('#datetime').textContent = currentDateTime;
+      }
+
+      setInterval(updateDateTime, 1000);
+    </script>
+  </body>
+</html>
+
+<html lang="en">
+<head>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Form</title>
+</head>
+
+<nav class="navbar bg-body-tertiary">
+    <form class="container-fluid justify-content-start">
+      <a href="/"><button class="btn btn-outline-success me-2" type="button">Main Page</button></a>
+      <a href="history"></a><button class="btn btn-sm btn-outline-secondary" type="button">History</button></a>
+    </form>
+  </nav>
+
+    <body>
+        <div class="container ">
+            <h2>Purchase Form</h2>
+
+        <div class="container">
+            <form form method="POST" action="/purchase-form">
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" class="form-input" id="product-name" name="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="unit-price">Unit Price</label>
+                    <input type="number" class="form-input" id="unit-price" name="unit-price"required>
+                </div>
+                <div class="form-group">
+                    <label for="pieces">Number of Pieces</label>
+                    <input type="number" class="form-input" id="pieces" name="pieces" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
+
+
